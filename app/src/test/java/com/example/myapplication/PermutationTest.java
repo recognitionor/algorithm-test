@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class PermutationTest {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{2, 3, 4};
+        int[] arr = new int[]{1, 1, 1};
         int n = arr.length;
 
         LinkedList<Integer> list = new LinkedList<>();
@@ -15,31 +15,35 @@ public class PermutationTest {
 
         int check[] = new int[n];
         System.out.println("****순  열****");
-        for (int i = 1; i <= arr.length; i++) {
-            permutation(list, check, n, i);
-        }
+//        for (int i = 1; i <= arr.length; i++) {
+//            permutation(list, check, n, i);
+//        }
+        permutation(list, check, n, arr.length);
+
         list.clear();
 
         //중복순열
         System.out.println("****중복순열****");
-        for (int i = 1; i <= arr.length; i++) {
-            rePermutation(list, n, i);
-        }
-
+//        for (int i = 1; i <= arr.length; i++) {
+//            rePermutation(list, n, i);
+//        }
+        rePermutation(list, n, arr.length);
         list.clear();
 
         //조합
         System.out.println("****조  합****");
-        for (int i = 1; i <= arr.length; i++) {
-            combination(list, n, i, 0);
-        }
+//        for (int i = 1; i <= arr.length; i++) {
+//            combination(list, n, i, 0);
+//        }
+        combination(list, n, arr.length, 0);
         list.clear();
 
         //중복조합
         System.out.println("****중복조합****");
-        for (int i = 1; i <= arr.length; i++) {
-            reCombination(list, n, i, 0);
-        }
+//        for (int i = 1; i <= arr.length; i++) {
+//            reCombination(list, n, i, 0);
+//        }
+        reCombination(list, n, arr.length, 0);
     }
 
     //중복조합
